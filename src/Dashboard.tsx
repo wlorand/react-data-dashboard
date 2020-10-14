@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import InfoPanel from "./panels/InfoPanel";
-import AllocationPanel from "./panels/AllocationPanel";
-import PerformancePanel from "./panels/PerformancePanel";
-import PositionsPanel from "./panels/PositionsPanel";
+// child components
+import InfoPanel from './panels/InfoPanel';
+import AllocationPanel from './panels/AllocationPanel';
+import PerformancePanel from './panels/PerformancePanel';
+import PositionsPanel from './panels/PositionsPanel';
 
-export default function Dashboard() {
+function Dashboard() {
   return (
     <div className="panels">
       <div className="panel-info">
@@ -21,5 +22,7 @@ export default function Dashboard() {
         <PositionsPanel />
       </div>
     </div>
-  )
+  );
 }
+
+export default Dashboard;

@@ -1,7 +1,15 @@
+/**
+ * File: dataService.ts
+ * Desc: fetch data for the React app
+ */
+
+// mock data imports
 import { info } from "../data/info";
 import { allocation } from "../data/allocation";
 import { performance } from "../data/performance";
 import { positions } from "../data/positions";
+
+// TS interface imports
 import { Allocation, Position } from "../data/models";
 
 function getRandomDelay() {

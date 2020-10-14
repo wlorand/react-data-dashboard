@@ -1,4 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+
+// data service imports
+import { getFundAllocation } from '../services/dataService';
+
+// TS interfaces
+import { Allocation } from '../data/models';
+
+// Chart UI Components
 import {
   Chart,
   ChartLegend,
@@ -6,20 +14,21 @@ import {
   ChartSeriesItem,
   ChartSeriesLabels,
   ChartTitle,
-  ChartTooltip
-} from "@progress/kendo-react-charts";
-import { getFundAllocation } from "../services/dataService";
-import { Allocation } from "../data/models";
+  ChartTooltip,
+} from '@progress/kendo-react-charts';
 
-export default function AllocationPanel() {
+function AllocationPanel() {
+  // local state
   const [data, setData] = React.useState<Allocation[]>();
-  React.useEffect(() => {
+
+  // fetch data via useEffect (aka componentDidMount)
+  useEffect(() => {
     getFundAllocation().then((data: Allocation[]) => {
       setData(data);
-    })
+    });
   }, []);
 
-  return (
-    <h2>Allocation Panel</h2>
-  )
+  return <h2>[Pie Chart] Allocation Panel</h2>;
 }
+
+export default AllocationPanel;

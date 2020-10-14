@@ -1,17 +1,26 @@
-import React from "react";
-import { PanelBar, PanelBarItem } from "@progress/kendo-react-layout";
-import { getFundInfo } from "../services/dataService";
-import { FundInfo } from "../data/models";
+import React, { useState, useEffect } from 'react';
 
-export default function InfoPanel() {
-  const [fundInfo, setFundInfo] = React.useState<FundInfo>();
-  React.useEffect(() => {
+// data service imports
+import { getFundInfo } from '../services/dataService';
+
+// TS interfaces
+import { FundInfo } from '../data/models';
+
+// UI Components
+import { PanelBar, PanelBarItem } from '@progress/kendo-react-layout';
+
+function InfoPanel() {
+  // local state
+  const [fundInfo, setFundInfo] = useState<FundInfo>();
+
+  // fetch data via useEffect (aka componentDidMount)
+  useEffect(() => {
     getFundInfo().then((data: FundInfo) => {
       setFundInfo(data);
     });
   }, []);
 
-  return (
-    <h2>Info Panel</h2>
-  );
+  return <h2>My Info Panel</h2>;
 }
+
+export default InfoPanel;
