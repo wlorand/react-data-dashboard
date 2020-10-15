@@ -5,12 +5,48 @@
 
 // panels styles
 .panels {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 225px auto auto;
+  grid-template-rows: auto auto;
 }
+
+.panels > div {
+  border: 1px solid #f00; // debug
+}
+
 .panel-info {
+  // span across 2 grid rows - 2 has been specified by grid-template-rows: auto * 2
+  grid-row: span 2;
 }
 .panel-allocation {
 }
 .panel-balance {
 }
 .panel-positions {
+  // span across 2 cols
+  grid-column: span 2;
+}
+
+// @media queries for panels
+
+@media (max-width: 750px) {
+  .panels {
+    // change from 3 cols to two
+    grid-template-columns: 225px auto;
+  }
+  // seems to be same as above
+  .panel-positions {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .panels {
+    // change to one column --> stacking all containers into rows
+    grid-template-columns: auto;
+  }
+  .panel-positions {
+    grid-column: span 1;
+  }
 }
