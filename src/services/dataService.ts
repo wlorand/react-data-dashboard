@@ -1,6 +1,8 @@
 /**
  * File: dataService.ts
- * Desc: fetch data for the React app
+ * Desc: fetch data for the React app 
+ *     HERE: fetching data from local files and setting a random setTimeout to
+ *           simulate an async operation that takes a bit of time (clever!)
  */
 
 // mock data imports
@@ -13,9 +15,7 @@ import { positions } from "../data/positions";
 import { Allocation, Position } from "../data/models";
 
 function getRandomDelay() {
-  // return 0;
   return 500 + (Math.random() * 2000);
-  // return 9999999999;
 }
 
 export function getFundInfo(): Promise<any> {
