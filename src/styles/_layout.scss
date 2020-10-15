@@ -35,10 +35,6 @@
     // change from 3 cols to two
     grid-template-columns: 225px auto;
   }
-  // seems to be same as above
-  .panel-positions {
-    grid-column: span 2;
-  }
 }
 
 @media (max-width: 500px) {
