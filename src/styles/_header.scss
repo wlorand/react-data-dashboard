@@ -1,6 +1,6 @@
 h1 {
   font-family: Ubuntu;
-  background: url("/header.svg") no-repeat;
+  background: url('/header.svg') no-repeat;
   color: white;
   margin: 0;
   font-weight: bold;
@@ -36,6 +36,8 @@ h1 span {
   font-size: 20px;
 }
 
+// media queries for headers -- better as its own _responsive.scss file ?
+// medium
 @media (max-width: 700px) {
   h1 {
     padding: 1rem;
@@ -49,6 +51,8 @@ h1 span {
     height: 35px;
   }
 }
+
+// small
 @media (max-width: 500px) {
   h1 {
     font-size: 1.2rem;

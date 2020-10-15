@@ -1,10 +1,14 @@
-import React from "react";
-import "hammerjs";
+import React from 'react';
 
-import DrawerContainer from "./layout/DrawerContainer";
-import Dashboard from "./Dashboard";
+// ?
+import 'hammerjs';
 
-import "./App.scss";
+// child UI components
+import DrawerContainer from './layout/DrawerContainer';
+import Dashboard from './Dashboard';
+
+// sass styles
+import './app.scss';
 
 function App() {
   return (
