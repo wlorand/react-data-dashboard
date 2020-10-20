@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+
+import React from 'react';
 
 // data service imports
-import { getPositions } from '../services/dataService';
+// import { getPositions } from '../services/dataService';
 
 // TS interfaces
-import { Position } from '../data/models';
+// import { Position } from '../data/models';
 
 // Data Grid UI Components
-import { Grid, GridCellProps, GridColumn } from '@progress/kendo-react-grid';
+// import { Grid, GridCellProps, GridColumn } from '@progress/kendo-react-grid';
 
 function PositionsPanel() {
   // local state
-  const [positions, setPositions] = useState<Position[]>();
+  // const [positions, setPositions] = useState<Position[]>();
 
   // fetch data via useEffect (aka componentDidMount)
-  useEffect(() => {
-    getPositions().then((data: Position[]) => {
-      setPositions(data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   getPositions().then((data: Position[]) => {
+  //     setPositions(data);
+  //   });
+  // }, []);
 
   return <h2>[Data Grid] Positions Panel</h2>;
 }
