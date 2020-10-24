@@ -9,10 +9,10 @@ import { Allocation } from '../data/models';
 // Chart UI Components
 import {
   Chart,
-  ChartLegend,
   ChartSeries,
   ChartSeriesItem,
   ChartSeriesLabels,
+  ChartLegend,
   ChartTitle,
   ChartTooltip,
 } from '@progress/kendo-react-charts';

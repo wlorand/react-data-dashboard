@@ -6,6 +6,7 @@ import AllocationPanel from './panels/AllocationPanel';
 import PerformancePanel from './panels/PerformancePanel';
 import PositionsPanel from './panels/PositionsPanel';
 
+// Render Chart Components in a Dashboard with CSS Grid Layout
 function Dashboard() {
   return (
     <div className="panels">

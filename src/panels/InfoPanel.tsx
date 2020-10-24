@@ -6,7 +6,7 @@ import { getFundInfo } from '../services/dataService';
 // TS interfaces
 import { FundInfo } from '../data/models';
 
-// UI Components
+// UI Components (Kendo React)
 import { PanelBar, PanelBarItem } from '@progress/kendo-react-layout';
 
 function InfoPanel() {
@@ -17,9 +17,9 @@ function InfoPanel() {
   // better: use a data fetch service file for consolidated data fetching (get confirm)
   useEffect(() => {
     getFundInfo().then((data: FundInfo) => {
-      setFundInfo(data); // pop into local state
+      setFundInfo(data); // pop data into local state right from the fetch
     });
-  }, []);
+  }, []); // mimic ComponentDidMount
 
   // return PanelBar, PanelBarItem UI Components and fill with mapped over data
   return (

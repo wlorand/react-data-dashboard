@@ -1,14 +1,14 @@
 /**
  * File: _layout.scss (partial)
- * Desc: Layout Styles for Dashboard Panels
+ * Desc: Layout Styles for Dashboard Panels (CSS Grid)
  */
 
 // panels styles
 .panels {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 225px auto auto;
-  grid-template-rows: auto auto;
+  grid-gap: 10px; // gutters
+  grid-template-columns: 225px auto auto; // 3 cols
+  grid-template-rows: auto auto; // 2 rows
 }
 
 .panels > div {
@@ -39,7 +39,7 @@
 
 @media (max-width: 500px) {
   .panels {
-    // change to one column --> stacking all containers into rows
+    // Stacking: change to one column --> stacking all containers into rows
     grid-template-columns: auto;
   }
   .panel-positions {
