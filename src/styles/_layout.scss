@@ -17,15 +17,18 @@
 
 .panel-info {
   // span across 2 grid rows - 2 has been specified by grid-template-rows: auto * 2
+  grid-column: span 1;
   grid-row: span 2;
 }
-.panel-allocation {
-}
+.panel-allocation,
 .panel-balance {
+  grid-column: span 1;
+  grid-row: span 1;
 }
 .panel-positions {
   // span across 2 cols
   grid-column: span 2;
+  grid-row: span 1;
 }
 
 // @media queries for panels

@@ -30,9 +30,7 @@ function PerformancePanel() {
 
   // fetch data via useEffect (aka componentDidMount)
   useEffect(() => {
-    getPerformance().then((results: string[]) => {
-      setData(results);
-    });
+    getPerformance().then((results: string[]) => setData(results));
   }, []);
 
   return (

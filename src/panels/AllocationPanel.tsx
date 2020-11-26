@@ -23,10 +23,7 @@ function AllocationPanel() {
 
   // fetch data via useEffect (aka componentDidMount)
   useEffect(() => {
-    getFundAllocation().then((data: Allocation[]) => {
-      console.table(data);
-      setData(data);
-    });
+    getFundAllocation().then((data: Allocation[]) => setData(data));
   }, []);
 
   return (
@@ -41,7 +38,7 @@ function AllocationPanel() {
           />
         </ChartSeriesItem>
       </ChartSeries>
-      <ChartLegend position={'bottom'} visible={true} />
+      <ChartLegend visible={true} position={'bottom'} />
       <ChartTooltip
         render={(e: any) => <div>{e.point ? e.point.category : ''}</div>}
       />
